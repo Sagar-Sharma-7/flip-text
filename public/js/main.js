@@ -1,3 +1,10 @@
+const heading = document.querySelector("#heading");
+const userText = document.querySelector("$#text");
+const flipBtn = document.querySelector("#flipBtn");
+const resultBox = document.querySelector(".result");
+const copyBtn = document.querySelector("#copyBtn");
+
+
 const fliptext = (str) => {
     const text = str.toLowerCase();
     const charx = {
