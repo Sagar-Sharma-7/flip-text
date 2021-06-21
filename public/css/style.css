@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Viaoda Libre', cursive;
+}
+
+body, .boxOne, .boxTwo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(#ACFBAF, #63FD86);
+
+}
+
+.container{
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+#heading{
+    margin-bottom: 8vh;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.box > div{
+    height: 25vh;
+    width: 50vw;
+}
+
+#text{
+    width: 95%;
+    border: none;
+    outline: none;
+    height: 8vh;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba(31, 135, 36, 0.37);
+    border-radius: 10px;
+    text-align: center;
+    padding: 0px 2vw;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+#flipBtn{
+    width: 100%;
+    border: none;
+    background: #1e1e1e;
+    color: #63FD86;
+    height: 8vh;
+    font-weight: 900;
+    outline: none;
+    cursor: pointer;
+}
+
+#flipBtn:hover{
+    color: #fff;
+}
+
+.boxTwo{
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#copyBtn{
+    border: none;
+    padding: 2vh 2vw;
+    border-radius: 20px;
+    color: #63FD86;
+    background: #1e1e1e;
+    cursor: pointer;
+    margin-left: 30vw;
+}
