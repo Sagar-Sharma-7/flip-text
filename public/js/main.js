@@ -1,13 +1,29 @@
-const heading = document.querySelector("#heading");
-const userText = document.querySelector("$#text");
-const flipBtn = document.querySelector("#flipBtn");
-const resultBox = document.querySelector(".result");
-const copyBtn = document.querySelector("#copyBtn");
+// assigning const variables
+const heading = document.querySelector("#heading"),
+          userText = document.querySelector("#text"),
+          flipBtn = document.querySelector("#flipBtn"),
+          resultBox = document.querySelector(".result"),
+          copyBtn = document.querySelector("#copyBtn");
+
+// text content
+heading.textContent = "Flip Text";
+flipBtn.textContent = "Flip Text";
+resultBox.textContent = "ɟʃıd ʇǝxʇ";
+copyBtn.textContent = "Copy";
 
 
-const fliptext = (str) => {
-    const text = str.toLowerCase();
-    const charx = {
+// window onload function
+const alertMessage = () => {
+    alert("Type your text in Lower Case.")
+}
+
+
+
+const fliptext = () => {
+
+    const text = userText.value;
+    console.log(text);
+    const flipChar = {
         " ": " ",
         a : '\u0250',
         b : 'q',
@@ -35,6 +51,32 @@ const fliptext = (str) => {
         x: 'x',
         y : '\u028E',
         z: "z",
+        A: "∀",
+        B: "𐐒",
+        C: "Ɔ",
+        D: "ᗡ",
+        E: "Ǝ",
+        F: "Ⅎ",
+        G: "⅁",
+        H: "H",
+        I: "I",
+        J: "ſ",
+        K: "ꓘ",
+        L: "˥",
+        M: "W",
+        N: "N",
+        O: "O", 
+        P: "Ԁ", 
+        Q: "Ꝺ", 
+        R: "ꓤ", 
+        S: "S", 
+        T: "T", 
+        U: "U", 
+        V: "Ʌ", 
+        W: "M", 
+        X: "X", 
+        Y: "Y", 
+        Z: "Z", 
         '.' : '\u02D9',
         '[' : ']',
         '(' : ')',
@@ -53,10 +95,22 @@ const fliptext = (str) => {
 
     let resultStr = "";
     for(let i = 0; i < text.length; i++){
-        resultStr += charx[text[i]]
+        resultStr += flipChar[text[i]]
     }
 
     console.log(resultStr);
+    resultBox.innerHTML = resultStr;
 }
 
-fliptext("flip text");
+const copyText = () => {
+    navigator.clipboard.writeText(resultBox.innerHTML);
+    copyBtn.innerHTML = "Copied";
+    setTimeout(() => {
+        copyBtn.innerHTML = "Copy";
+    }, 600);
+}
+
+flipBtn.addEventListener("click", fliptext);
+alertMessage();
+
+copyBtn.addEventListener("click", copyText)
