@@ -14,14 +14,17 @@ copyBtn.textContent = "Copy";
 
 // window onload function
 const alertMessage = () => {
-    alert("Type your text in Lower Case.")
+    alert("Don't use symbols. (e.g. !, #, @, $...)")
 }
 
 
 
 const fliptext = () => {
-
     const text = userText.value;
+    if(text == ""){
+        alert("First type something.")
+    }else{
+
     console.log(text);
     const flipChar = {
         " ": " ",
@@ -110,6 +113,7 @@ const fliptext = () => {
 
     console.log(resultStr);
     resultBox.innerHTML = resultStr;
+  }
 }
 
 const copyText = () => {
@@ -119,6 +123,19 @@ const copyText = () => {
         copyBtn.innerHTML = "Copy";
     }, 600);
 }
+
+const getHeight = () => {
+    if(window.innerHeight < 400){
+        alert("Please Rotate your device.")
+        console.error(window.innerHeight);
+    }else{
+        console.log(window.innerHeight);
+    }
+}
+
+setInterval(() => {
+    getHeight();
+}, 5000);
 
 flipBtn.addEventListener("click", fliptext);
 alertMessage();
