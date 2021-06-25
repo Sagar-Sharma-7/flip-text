@@ -124,19 +124,6 @@ const copyText = () => {
     }, 600);
 }
 
-const getHeight = () => {
-    if(window.innerHeight < 400){
-        alert("Please Rotate your device.")
-        console.error(window.innerHeight);
-    }else{
-        console.log(window.innerHeight);
-    }
-}
-
-setInterval(() => {
-    getHeight();
-}, 5000);
-
 flipBtn.addEventListener("click", fliptext);
 alertMessage();
 
