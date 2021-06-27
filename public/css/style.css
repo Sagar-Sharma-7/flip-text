@@ -118,4 +118,7 @@ body{
     .result{
         font-size: 1.5rem;
     }
+    #text{
+        height: 13vh;
+    }
 }
